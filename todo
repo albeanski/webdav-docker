@@ -1,0 +1,10 @@
+disable uploads
+use sed for httpd config? cant remember what i even changed in it
+remove dav.conf in dockerfile?
+cleanup dockerfile
+finilaze actual needed uid/guid
+allow change of user/pass using .htaccess
+change dirs to something more docker-like ie: /webdav or /files
+
+
+
