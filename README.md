@@ -43,7 +43,7 @@ services:
     environment:
       - WEBDAV_AUTH=myuser1:mypasswd;myuser2:otherpasswd
     volumes:
-      - /path/to/files:/webdav:
+      - /path/to/files:/webdav
 ```
 
 ### Using .env file for substitution
