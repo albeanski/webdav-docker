@@ -8,7 +8,7 @@ www-data group does. we use the default apache user/group
 
 
 ## Docker-compose Examples
-### Example of basic configuration
+### Basic configuration
 ./docker-compose.yml
 ```yaml
 ---
@@ -21,7 +21,7 @@ services:
       - /path/to/files:/webdav
 ```
 
-### Example of read-only volume mount
+### Read-only volume mount
 ./docker-compose.yml
 ```yaml
 ---
@@ -33,8 +33,8 @@ services:
       - /path/to/files:/webdav:ro
 ```
 
-### Example of custom multi user/pass authentication
-#### ./docker-compose.yml
+### Multi user/pass authentication
+./docker-compose.yml
 ```yaml
 services:
   webdav:
@@ -45,8 +45,8 @@ services:
       - /path/to/files:/webdav:
 ```
 
-### Example of .env substitution
-#### docker-compose.yml
+### Using .env file for substitution
+docker-compose.yml
 ```yaml
 ---
 version: '3'
@@ -59,8 +59,7 @@ services:
     volumes:
       - /path/to/files:/webdav
 ```
-
-#### .env 
+.env 
 ```bash
 WEBDAV_AUTH=myuser:mypasswd
 ```
