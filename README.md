@@ -1,10 +1,10 @@
 # webdav-docker
-uses alpine:3.12 because of a dbm driver issue. Later versions have removed the
-apr-util-dbm_db package. See: https://gitlab.alpinelinux.org/alpine/aports/-/issues/13112
+This image `alpine:3.12` because of a dbm driver issue. Later versions have removed the
+`apr-util-dbm_db` package. See: https://gitlab.alpinelinux.org/alpine/aports/-/issues/13112
 
 
-alpine defaults to apache user and group. www-data user does not exist but
-www-data group does. we use the default apache user/group
+Alpine also defaults to the `apache` user and group. The `www-data` user does not exist but
+`www-data` group does. This image uses the default `apache` user/group.
 
 
 ## Docker-compose Examples
@@ -46,6 +46,12 @@ services:
 ```
 
 ### Using .env file for substitution
+
+.env 
+```bash
+WEBDAV_AUTH=myuser:mypasswd
+```
+
 docker-compose.yml
 ```yaml
 ---
@@ -58,8 +64,4 @@ services:
       - WEBDAV_AUTH=${WEBDAV_AUTH}
     volumes:
       - /path/to/files:/webdav
-```
-.env 
-```bash
-WEBDAV_AUTH=myuser:mypasswd
 ```
