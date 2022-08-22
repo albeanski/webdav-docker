@@ -13,7 +13,6 @@ Alpine also defaults to the `apache` user and group. The `www-data` user does no
 ```yaml
 ---
 version: '3'
-
 services:
   webdav:
     image: albeanski/webdav:latest
@@ -36,6 +35,8 @@ services:
 ### Multi user/pass authentication
 ./docker-compose.yml
 ```yaml
+---
+version: '3' 
 services:
   webdav:
     image: albeanski/webdav:latest
@@ -56,7 +57,6 @@ docker-compose.yml
 ```yaml
 ---
 version: '3'
-
 services:
   webdav:
     image: albeanski/webdav:latest
