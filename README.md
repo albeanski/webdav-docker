@@ -16,6 +16,8 @@ version: '3'
 services:
   webdav:
     image: albeanski/webdav:latest
+    ports:
+      - 8000:80
     volumes:
       - /path/to/files:/webdav
 ```
@@ -28,6 +30,8 @@ version: '3'
 services:
   webdav:
     image: albeanski/webdav:latest
+    ports:
+      - 8000:80
     volumes:
       - /path/to/files:/webdav:ro
 ```
@@ -42,6 +46,8 @@ services:
     image: albeanski/webdav:latest
     environment:
       - WEBDAV_AUTH=myuser1:mypasswd;myuser2:otherpasswd
+    ports:
+      - 8000:80
     volumes:
       - /path/to/files:/webdav
 ```
@@ -62,6 +68,8 @@ services:
     image: albeanski/webdav:latest
     environment:
       - WEBDAV_AUTH=${WEBDAV_AUTH}
+    ports:
+      - 8000:80
     volumes:
       - /path/to/files:/webdav
 ```
