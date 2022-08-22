@@ -1,7 +1,6 @@
 # webdav-docker
 
-This is the repo for the [albeanski/webdav](https://hub.docker.com/r/albeanski/webdav) docker image. Easily deploy a container for a webdav server on Apache.
-to share or upload files. 
+This is the repo for the [albeanski/webdav](https://hub.docker.com/r/albeanski/webdav) docker image. Easily deploy a container for a webdav server on Apache to share or upload files. 
 
 This image `alpine:3.12` because of a dbm driver issue. Later versions have removed the
 `apr-util-dbm_db` package. See: https://gitlab.alpinelinux.org/alpine/aports/-/issues/13112
